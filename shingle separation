@@ -1,3 +1,4 @@
+#для разбивки шинглов применил алгорит на python. 
 f = open('Genome_1-1.txt', 'r') #считываем текст генома
 content = f.read()
 def genshingle(content): #функция деления на шинглы
@@ -9,3 +10,16 @@ def genshingle(content): #функция деления на шинглы
   return out
 a = genshingle(content)
 a
+
+#для второго списка аналогично
+f = open('Genome_2-1.txt', 'r') #считываем текст генома
+content1 = f.read()
+def genshingle(content1): #функция деления на шинглы
+  shingleLen = 2 #длина шингла
+  out = [] 
+  for i in range(len(content1)-(shingleLen-1)):
+    out.append (''.join( [x for x in content1[i:i+shingleLen]] ))
+ 
+  return out
+b = genshingle(content1)
+b
