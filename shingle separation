@@ -1,0 +1,11 @@
+f = open('Genome_1-1.txt', 'r') #считываем текст генома
+content = f.read()
+def genshingle(content): #функция деления на шинглы
+  shingleLen = 2 #длина шингла
+  out = [] 
+  for i in range(len(content)-(shingleLen-1)):
+    out.append (''.join( [x for x in content[i:i+shingleLen]] ))
+ 
+  return out
+a = genshingle(content)
+a
