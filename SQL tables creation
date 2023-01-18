@@ -1,0 +1,8 @@
+--создаю две таблицы для того, чтобы поместить в них набор последовательностей после парсинга
+CREATE TABLE JAC_SIM1
+( ID bigint, 
+GEN varchar);
+
+CREATE TABLE JAC_SIM2
+( ID bigint, 
+GEN varchar);
